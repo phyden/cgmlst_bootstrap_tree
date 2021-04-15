@@ -61,6 +61,7 @@ def main():
         else:
             df[c] = pd.to_numeric(df[c], errors="coerce", downcast="integer")
 
+    df.dropna(axis=1, how="all", inplace=True)
     data = df.values.astype(int)
     names = df.index.tolist()
 
