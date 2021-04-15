@@ -66,7 +66,7 @@ def main():
     names = df.index.tolist()
 
     constructor = DistanceTreeConstructor()
-    if args.umgpa:
+    if args.upgma:
         const = constructor.upgma
     else:
         const = constructor.nj
@@ -82,7 +82,14 @@ def main():
     supp_tree = get_support(main_tree, trees)
 
 
+    # remove labels of inner clades
+    for clade in supp_tree.get_nonterminals():
+        clade.name = ""
+
+    Phylo.draw(supp_tree)
+    plt.show()
     Phylo.write(supp_tree, args.output, "newick")
+
 
 if __name__ == '__main__':
     main()
