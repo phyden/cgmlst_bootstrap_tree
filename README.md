@@ -1,5 +1,6 @@
 # cgmlst_bootstrap_tree
 Scripts to create bootstrap trees for categorical data (like core genome MLST)
+NOTE: currently the categorical data is required to be integer interpretable
 
 # requirements
 - biopython
