@@ -1,6 +1,13 @@
 # cgmlst_bootstrap_tree
 Scripts to create bootstrap-trees for categorical data (like cgMLST)
 
+# requirements
+- biopython
+- pandas
+- numpy
+
+# usage
+
 ```
 usage: bootstrap_alleles.py [-h] [-i TABLE] [-o OUTPUT] [-t TIMES]
                             [--tree TREE] [--upgma] [-d DELIM]
