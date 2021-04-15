@@ -7,7 +7,6 @@ import pandas as pd
 from Bio.Phylo.TreeConstruction import DistanceTreeConstructor, DistanceMatrix
 from Bio import Phylo
 from Bio.Phylo.Consensus import get_support
-import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser(description="Routine to create bootstrap trees from categorical data like"
                                              "core genome MLST")
@@ -86,8 +85,6 @@ def main():
     for clade in supp_tree.get_nonterminals():
         clade.name = ""
 
-    Phylo.draw(supp_tree)
-    plt.show()
     Phylo.write(supp_tree, args.output, "newick")
 
 
