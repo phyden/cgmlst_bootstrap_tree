@@ -54,7 +54,7 @@ def main():
         parser.print_help()
         exit(0)
 
-    df = pd.read_csv(table, sep=args.delim, quotechar='"', index_col=0)
+    df = pd.read_csv(table, sep=args.delim, quotechar='"', index_col=False)
     for c in df.columns:
         if c.lower() == "sample id":
             df.set_index(c)
