@@ -2,7 +2,7 @@
 This is a script to create bootstrap trees for categorical data (like core genome MLST) from [Ridom SeqSphere](https://www.ridom.de/seqsphere/)
 
 NOTE: currently the categorical data is required to be integer interpretable, all other values and columns are ignored for distance caluclation.
-Sample ID column is identified if exported from SeqSphere (name: "Sample ID" - not case sensitive), otherwise column 0 is taken as ID
+Sample ID column is identified if exported from SeqSphere (name: "Sample ID" - not case sensitive)
 
 # requirements
 - biopython
