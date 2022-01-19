@@ -42,7 +42,7 @@ def bootstrap(array, times):
     i = 0
     while i < times:
         i += 1
-        yield array[:, np.random.choice(array.shape[1], int(array.shape[1] * 0.9), replace=False)]
+        yield array[:, np.random.choice(array.shape[1], array.shape[1], replace=True)]
 
 
 def main():
